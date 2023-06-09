@@ -9,9 +9,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="loginFormContext" prefHeight="508.0" prefWidth="589.0" style="-fx-background-color: #156ec0;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"  fx:controller="controller.LoginController">
+<AnchorPane fx:id="loginFormContext" prefHeight="508.0" prefWidth="589.0" style="-fx-background-color: #156ec0;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
     <children>
-        <TextField fx:id="ClientName" alignment="TOP_LEFT" layoutX="172.0" layoutY="292.0" promptText="Enter Your Name Here" style="-fx-background-color: #455a64; -fx-background-radius: 10;" styleClass="txtUserName" stylesheets="@assets/style.css">
+        <TextField fx:id="clientName" alignment="TOP_LEFT" layoutX="172.0" layoutY="292.0" promptText="Enter Your Name Here" style="-fx-background-color: #455a64; -fx-background-radius: 10;" styleClass="txtUserName" stylesheets="@assests/style.css">
             <font>
                 <Font size="19.0" />
             </font>
@@ -26,7 +26,7 @@
         </Button>
         <ImageView fitHeight="167.0" fitWidth="262.0" layoutX="179.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../assets/playteh.PNG" />
+                <Image url="@../asserts/playteh.PNG" />
             </image>
         </ImageView>
         <Label layoutX="165.0" layoutY="212.0" prefHeight="42.0" prefWidth="262.0" text="Let's have some fun" textFill="#9bb2db">
