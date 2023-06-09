@@ -1,4 +1,4 @@
-import util.ClientHandler;
+package util;
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -10,7 +10,7 @@ public class Server {
 
     public static void main(String[] args) throws IOException {
 
-        ServerSocket serverSocket = new ServerSocket(6002);
+        ServerSocket serverSocket = new ServerSocket(6009);
 
         Socket accept;
 
