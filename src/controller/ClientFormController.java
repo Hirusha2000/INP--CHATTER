@@ -37,7 +37,7 @@ public class ClientFormController extends Thread {
         String userName=LoginController.userName;
         lblClientName.setText(userName);
         try {
-            socket = new Socket("localhost", 6021);
+            socket = new Socket("localhost", 6023);
             System.out.println("Socket is connected with server!");
             reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             writer = new PrintWriter(socket.getOutputStream(), true);
@@ -167,7 +167,6 @@ public class ClientFormController extends Thread {
     public void msgSendOnAction(ActionEvent actionEvent) {
         String msg = txtMsg.getText();
         writer.println(lblClientName.getText() + ": " + msg);
-
         txtMsg.clear();
 
         if(msg.equalsIgnoreCase("BYE") || (msg.equalsIgnoreCase("logout"))) {
