@@ -23,6 +23,8 @@ public class LoginController {
         clientName.clear();
         stage.centerOnScreen();
         stage.show();
+        stage.setResizable(false);
+        stage.setMaximized(false);
     }
 
     public void HereWeGoOnAction(KeyEvent keyEvent) throws IOException {

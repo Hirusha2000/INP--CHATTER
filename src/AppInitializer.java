@@ -23,6 +23,8 @@ public class AppInitializer extends Application {
         primaryStage.setScene(scene);
         primaryStage.setTitle("Group Chat Application");
         primaryStage.centerOnScreen();
+        primaryStage.setResizable(false);
+        primaryStage.setMaximized(false);
         primaryStage.show();
 
     }
