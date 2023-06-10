@@ -16,10 +16,13 @@
    <children>
       <ScrollPane layoutY="57.0" prefHeight="439.0" prefWidth="423.0">
          <content>
-            <VBox fx:id="vBox" prefHeight="424.0" prefWidth="422.0" />
+            <VBox fx:id="vBox" prefHeight="424.0" prefWidth="422.0">
+               <children>
+                  <ImageView fitHeight="65.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true" />
+               </children></VBox>
          </content>
       </ScrollPane>
-      <Pane layoutX="-4.0" layoutY="496.0" prefHeight="58.0" prefWidth="427.0" style="-fx-background-color: #156ec0;">
+      <Pane layoutX="-4.0" layoutY="496.0" prefHeight="58.0" prefWidth="427.0" style="-fx-background-color: #87CEEB;">
          <children>
             <TextField fx:id="txtMsg" layoutX="55.0" layoutY="15.0" onKeyReleased="#SendMessageOnAction" prefHeight="31.0" prefWidth="248.0" promptText="Say Something..." style="-fx-background-radius: 10;">
                <font>
@@ -28,15 +31,15 @@
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor></TextField>
-            <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="314.0" layoutY="17.0" onMouseClicked="#ImageMouseClicked" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="45.0" fitWidth="41.0" layoutX="311.0" layoutY="9.0" onMouseClicked="#ImageMouseClicked" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../assets/photo-camera-interface-symbol-for-button.png" />
+                  <Image url="@../assets/camPng.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ImageView>
-            <Button layoutX="359.0" layoutY="16.0" mnemonicParsing="false" onAction="#msgSendOnAction" prefHeight="26.0" prefWidth="50.0" style="-fx-background-color: #0009fa;" text="Send" textFill="WHITE">
+            <Button layoutX="409.0" layoutY="16.0" mnemonicParsing="false" onAction="#msgSendOnAction" prefHeight="26.0" prefWidth="0.0" style="-fx-background-color: #0009fa;" text="Send" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
@@ -52,11 +55,19 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ImageView>
+            <ImageView fitHeight="45.0" fitWidth="41.0" layoutX="368.0" layoutY="9.0" onMouseClicked="#msgSendOnAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/send-message.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
          </children>
       </Pane>
       <AnchorPane layoutX="-2.0" prefHeight="58.0" prefWidth="425.0" style="-fx-background-color: #156ec0;">
          <children>
-            <Label fx:id="lblClientName" layoutX="14.0" layoutY="18.0" text=" Name" textFill="#aba7a7">
+            <Label fx:id="lblClientName" layoutX="14.0" layoutY="18.0" text=" Name" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
