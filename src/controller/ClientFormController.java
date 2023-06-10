@@ -1,13 +1,14 @@
 package controller;
 
 import javafx.application.Platform;
-import javafx.event.ActionEvent;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
@@ -164,7 +165,7 @@ public class ClientFormController extends Thread {
         }
     }
 
-    public void msgSendOnAction(ActionEvent actionEvent) {
+    public void msgSendOnAction() {
         String msg = txtMsg.getText();
         writer.println(lblClientName.getText() + ": " + msg);
         txtMsg.clear();
@@ -181,5 +182,14 @@ public class ClientFormController extends Thread {
         fileChooser.setTitle("Open Image");
         this.filePath = fileChooser.showOpenDialog(stage);
         writer.println(lblClientName.getText() + " " + "img" + filePath.getPath());
+    }
+
+    public void SendMessageOnAction(KeyEvent keyEvent) {
+
+        if (keyEvent.getCode() == KeyCode.ENTER) {
+           msgSendOnAction();
+        }
+
+
     }
 }

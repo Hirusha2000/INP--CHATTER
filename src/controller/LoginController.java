@@ -1,9 +1,10 @@
 package controller;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -14,7 +15,7 @@ public class LoginController {
     public TextField clientName;
     static String userName;
 
-    public void loginOnAction(ActionEvent actionEvent) throws IOException {
+    public void loginOnAction() throws IOException {
         userName=clientName.getText();
         Stage stage = new Stage();
         stage.setScene(new Scene(FXMLLoader.load(LoginController.class.getResource("../view/ClientForm.fxml"))));
@@ -23,6 +24,17 @@ public class LoginController {
         stage.centerOnScreen();
         stage.show();
     }
+
+    public void HereWeGoOnAction(KeyEvent keyEvent) throws IOException {
+
+            if (keyEvent.getCode() == KeyCode.ENTER) {
+                loginOnAction();
+            }
+        }
+
+
+
+
 }
 
 
